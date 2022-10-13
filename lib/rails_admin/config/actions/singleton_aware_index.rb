@@ -4,7 +4,8 @@ module RailsAdmin::Config::Actions::SingletonAwareIndex
 
     # Hide this index action when dealing with a singleton model
     visible do
-      bindings[:abstract_model].model.included_modules.exclude? ActiveRecord::Singleton
+      #bindings[:abstract_model].model.included_modules.exclude? ActiveRecord::Singleton
+      true
     end
 
     # Store reference to the original controller procedure
