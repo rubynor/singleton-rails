@@ -12,7 +12,7 @@ module ActiveRecord
 
     private
 
-    def create_or_update(sve)
+    def create_or_update(arg = nil)
       run_callbacks(:save) do
         raise ReadOnlyRecord if readonly?
 
